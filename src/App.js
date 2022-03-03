@@ -1,7 +1,28 @@
+import Navi from "./Navi";
+import CategoryList from "./CategoryList"
+import ProductList from "./ProductList"
+import { Container, Row, Col } from "reactstrap";
+
 function App() {
+
+  let categoryTitle = "Category List";
+  let productTitle = "Product List";
+
   return (
     <div>
-      <h3>Hello from react</h3>
+      <Container>
+        <Row>
+          <Navi></Navi>
+        </Row>
+        <Row>
+          <Col xs="3">
+            <CategoryList title={categoryTitle}></CategoryList>
+          </Col>
+          <Col xs="9">
+            <ProductList title={productTitle}></ProductList>
+          </Col>
+        </Row>
+      </Container>
     </div>
   );
 }
